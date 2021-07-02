@@ -10,18 +10,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div name="nameDate" class="nameDate" id="nameDate">
+        <div><input type="text" name="userName" class="userName" id="userName" ></Input></div>
+        <div><input type="text" name="birthday" class="birthday" id="birthday"></input></div>
+    </div>
     <div name="header" class="header" id="header">
-        <div name="userPhoto" class="heroPhoto" id="heroPhoto">
-           <img src="photo.jpeg" alt="my face" name="myFace" id="myFace">
+        <div name="userPhoto" class="userPhoto" id="userPhoto">
+           <img src="photo.jpeg" alt="myFace" name="myFace" id="myFace">
         </div>
         <div name="userInfo" class="userInfo" id="userInfo">
-            <i class="fas fa-map-marker-alt"></i>
-            <i class="fas fa-at"></i>
-            <i class="fas fa-phone-alt"></i>
-            <i class="fab fa-github-square"></i>
-            <i class="fab fa-linkedin"></i>
+                <i class="fas fa-map-marker-alt fa-lg"></i>
+                    <input type="text" name="address" class="address" id="address"> 
+                <br>
+                <i class="fas fa-phone-alt fa-lg"></i>
+                    <input type="tel" name="mobileNumber" class="mobileNumber" id="mobileNumber" size="15">
+                <br>    
+                <i class="fas fa-at fa-lg"></i>
+                    <input type="email" name="email" class="email" id="email">
+                <br>
+                <i class="fab fa-github-square fa-lg"></i>
+                    <input type="text" name="github" class="github" id="github">
+                <br>
+                <i class="fab fa-linkedin fa-lg"></i>
+                    <input type="text" name="linkedin" class="linkedin" id="linkedin">
+            <!--
             <i class="fas fa-plus"></i>
             <i class="fas fa-minus"></i>
+            -->
         </div>
     </div>
     <div name="mainSection" class="mainSection" id="mainSection">
@@ -38,6 +53,5 @@
                 <button name="removeWork" class="removeWork" id="removeWork" onclick="removeWorkInput();"><i class="fas fa-minus"></i></button>
         </div>
     </div>
-
 </body>
 </html> 

@@ -8,7 +8,7 @@ function addEducationInput(){
     //date input (type="text")
     const date = document.createElement('input');
     date.setAttribute("type","text");
-    date.setAttribute("name","eduDate"+counterEdu);
+    date.setAttribute("name","eduDate");
     date.setAttribute("id","eduDate"+counterEdu);
     date.setAttribute("size","20");
     educationForm.append(date);
@@ -21,11 +21,11 @@ function addEducationInput(){
     educationForm.append(input);
     //br after education date
     const brDate =document.createElement('br');
-    brDate.setAttribute("id","idEduDate"+counterEdu);
+    brDate.setAttribute("id","brEduDate"+counterEdu);
     date.insertAdjacentElement('afterEnd',brDate);
     //br after education input
     const brInput =document.createElement('br');
-    brInput.setAttribute("id","idInput"+counterEdu); 
+    brInput.setAttribute("id","brInput"+counterEdu); 
     input.insertAdjacentElement('afterEnd',brInput);
     counterEdu++
 }
@@ -42,11 +42,11 @@ function removeEducationInput(){
         let inputToBeRemoved= document.querySelector(name);
         inputToBeRemoved.remove();
         //removes br for date
-        let brDateId="#idEduDate"+counterEdu;
+        let brDateId="#brEduDate"+counterEdu;
         let brDateToBeRemoved = document.querySelector(brDateId);
         brDateToBeRemoved.remove();
         //removes br for input
-        let brInputId="#idInput"+counterEdu;
+        let brInputId="#brInput"+counterEdu;
         let brInputToBeRemoved = document.querySelector(brInputId);
         brInputToBeRemoved.remove();
     }
@@ -57,7 +57,7 @@ function addWorkInput(){
     //date input (type="text")
     const date = document.createElement('input');
     date.setAttribute("type","text");
-    date.setAttribute("name","workDate"+counterWork);
+    date.setAttribute("name","workDate");
     date.setAttribute("id","workDate"+counterWork);
     date.setAttribute("size","20");
     workForm.append(date);
@@ -70,11 +70,11 @@ function addWorkInput(){
     workForm.append(input);
     //br after work date
     const brDate=document.createElement('br');
-    brDate.setAttribute("id","idWorkDate"+counterWork);
+    brDate.setAttribute("id","brWorkDate"+counterWork);
     date.insertAdjacentElement('afterend',brDate);
     //br after work input
     const br =document.createElement('br');
-    br.setAttribute("id","idWork"+counterWork)
+    br.setAttribute("id","brWork"+counterWork)
     input.insertAdjacentElement('afterend',br)
     counterWork++
 }
@@ -91,11 +91,11 @@ function removeWorkInput(){
         let toBeRemoved= document.querySelector(name);
         toBeRemoved.remove();
         //removes date br
-        let dateBr = "#idWorkDate"+counterWork;
+        let dateBr = "#brWorkDate"+counterWork;
         let dateBrToBeRemoved = document.querySelector(dateBr);
         dateBrToBeRemoved.remove();
         //removes work br
-        let idName="#idWork"+counterWork;
+        let idName="#brWork"+counterWork;
         let brToBeRemoved = document.querySelector(idName);
         brToBeRemoved.remove();
     }

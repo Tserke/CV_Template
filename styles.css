@@ -1,5 +1,220 @@
-img{
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin:0;
+    text-align: center;
+}
+img{ 
+    margin-top: .5em;
     width: 165px;
     height: 170px;
     border-radius: 1em;
 }
+.userInfo{
+    margin:.5em;
+}
+.userInfo input{ 
+    width:90%;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin:.2em;
+    text-align: justify;
+}
+.education{
+    border: solid 1px rgb(43, 98, 153);
+    border-radius: .5em;
+    margin: .5em;
+    background-color: lightslategrey;
+}
+.education input{
+    border: none;
+    outline: none;
+    background-color:rgba(195, 216, 238, 0.39);
+    color:aliceblue;
+    font-size: 12px;
+    width: 90%;
+}
+input[name=eduDate]{
+    text-align: left;
+    width:50%;   
+}
+
+@media (min-width: 730px){
+    body{
+        text-align: left;
+    }
+    i{
+        width: 20px;
+        height:25px;
+        text-align: center;
+    } 
+    .nameDate{
+        display:flex;
+    }
+    .userName{
+        margin:.5em 0 0 .5em;
+        font-size: 1.5em;
+        font-weight: bold;
+        color:rgb(36, 53, 151);
+    }
+    .userName input{
+        width:auto;
+    }
+    .birthday{
+        margin:.5em 0 0 .3em;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: lightslategrey;
+    }
+    .header{
+        margin:.5em;
+        display: flex;
+    }
+    .userPhoto{
+        width:20%;
+    }
+    .userInfo{
+        width:70%;
+        color: darkslategrey;
+    } 
+    .userInfo input[type=text]{
+        font-size: 1.1em;
+        font-weight: bold;
+        color: lightslategrey;
+    }
+    .userInfo input[type=tel]{
+        font-size: 1.1em;
+        color:lightslategrey;
+        font-weight:bold;
+    }
+    .userInfo input[type=email]{
+        font-size: 1.1em;
+        color: lightslategrey;
+        font-weight:bold;
+    }
+    .mainSection{
+        display: flex;
+    }
+    .mainSection i{
+        width:auto;
+        height:auto;
+    }
+    .education{
+        width:35%;
+    }
+    .education [name^="edu"]{
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    .education [name="eduDate"]{
+        color:rgb(36, 53, 151);
+        font-weight: normal;
+    }
+    .work{
+        margin:.5em;
+        width:65%;
+    }
+    .work [name^="work"]{
+        color:lightslategrey;
+        font-weight: bold;
+    }
+    .work [name=workDate]{
+        color:rgb(36, 53, 151);
+        font-weight:normal;
+    }
+}
+@media print{
+    body{
+        text-align: left;
+    } 
+    input{  
+        background-color: transparent;
+        border:none;
+        outline: none;
+    }
+    i{
+        width: 20px;
+        height:25px;
+        text-align: center;
+    } 
+    .nameDate{
+        display: flex;
+        text-align: left;
+    }
+    .userName{
+        margin:.5em 0 0 .5em;
+        font-size: 1.5em;
+        font-weight: bold;
+        color:rgb(36, 53, 151);
+    }
+    .userName input{
+        width:auto;
+    }
+    .birthday{
+        margin:.5em 0 0 .3em;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: lightslategrey;
+    }
+    .header{
+        margin:.5em;
+        display: flex;
+    }
+    .userPhoto{
+        width:30%;
+    }
+    .userInfo{
+        width:70%;
+        color: darkslategrey;
+    } 
+    .userInfo input[type=text]{
+        font-size: 1.1em;
+        font-weight: bold;
+        color: lightslategrey;
+    }
+    .userInfo input[type=tel]{
+        font-size: 1.1em;
+        color:lightslategrey;
+        font-weight:bold;
+    }
+    .userInfo input[type=email]{
+        font-size: 1.1em;
+        color: lightslategrey;
+        font-weight:bold;
+    }
+    .mainSection{
+        display: flex;
+    }
+    .mainSection i{
+        width:auto;
+        height:auto;
+    }
+    .education{
+        width:35%;
+    }
+    .education input{
+        background-color:lightslategray;
+    }
+    .education [name^="edu"]{
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    .education [name="eduDate"]{
+        color:rgb(36, 53, 151);
+        font-weight: normal;
+    }
+    .work{
+        margin:.5em;
+        width:65%;
+    }
+    .work [name^="work"]{
+        color:lightslategrey;
+        font-weight: bold;
+    }
+    .work [name=workDate]{
+        color:rgb(36, 53, 151);
+        font-weight:normal;
+    }
+}
+
