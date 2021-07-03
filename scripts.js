@@ -10,14 +10,14 @@ function addEducationInput(){
     date.setAttribute("type","text");
     date.setAttribute("name","eduDate");
     date.setAttribute("id","eduDate"+counterEdu);
-    date.setAttribute("size","20");
+    date.setAttribute("placeholder","date");
     educationForm.append(date);
     //education input (type="text")
     const input = document.createElement('input');
     input.setAttribute("type","text");
     input.setAttribute("name","edu"+counterEdu);
     input.setAttribute("id","edu"+counterEdu);
-    input.setAttribute("size","50");
+    input.setAttribute("placeholder","education");
     educationForm.append(input);
     //br after education date
     const brDate =document.createElement('br');
@@ -59,14 +59,14 @@ function addWorkInput(){
     date.setAttribute("type","text");
     date.setAttribute("name","workDate");
     date.setAttribute("id","workDate"+counterWork);
-    date.setAttribute("size","20");
+    date.setAttribute("placeholder","date");
     workForm.append(date);
     //work input (type="text")
     const input = document.createElement('input');
     input.setAttribute("type","text");
     input.setAttribute("name","work"+counterWork);
     input.setAttribute("id","work"+counterWork);
-    input.setAttribute("size","50");
+    input.setAttribute("placeholder","work");
     workForm.append(input);
     //br after work date
     const brDate=document.createElement('br');

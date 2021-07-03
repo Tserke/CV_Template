@@ -5,6 +5,26 @@ body{
     margin:0;
     text-align: center;
 }
+i{
+    width: 20px;
+    height:25px;
+    text-align: center;
+} 
+.nameContainer{
+    width:100%;
+}
+.userName{
+    margin:.5em 0 0 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:rgb(36, 53, 151);
+}
+.birthday{
+    margin:.5em 0 .2em 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: lightslategrey;
+}
 img{ 
     margin-top: .5em;
     width: 165px;
@@ -21,34 +41,33 @@ img{
     margin:.2em;
     text-align: justify;
 }
+h4{
+    text-align: center;
+}
 .education{
     border: solid 1px rgb(43, 98, 153);
-    border-radius: .5em;
+    border-radius: .1em;
     margin: .5em;
-    background-color: lightslategrey;
+    background-color: rgb(208, 212, 221);
 }
 .education input{
-    border: none;
-    outline: none;
-    background-color:rgba(195, 216, 238, 0.39);
-    color:aliceblue;
-    font-size: 12px;
+    font-size: 15px;
     width: 90%;
 }
 input[name=eduDate]{
-    text-align: left;
     width:50%;   
 }
-
-@media (min-width: 730px){
+.work input{
+    font-size: 15px;
+    width: 90%;
+}
+input[name=workDate]{
+    width:50%;   
+}
+@media (min-width: 800px){
     body{
         text-align: left;
     }
-    i{
-        width: 20px;
-        height:25px;
-        text-align: center;
-    } 
     .nameDate{
         display:flex;
     }
@@ -58,12 +77,10 @@ input[name=eduDate]{
         font-weight: bold;
         color:rgb(36, 53, 151);
     }
-    .userName input{
-        width:auto;
-    }
+ 
     .birthday{
-        margin:.5em 0 0 .3em;
-        font-size: 1.5em;
+        margin:.7em 0 0 0;
+        font-size: 1.3em;
         font-weight: bold;
         color: lightslategrey;
     }
@@ -97,11 +114,23 @@ input[name=eduDate]{
         display: flex;
     }
     .mainSection i{
-        width:auto;
-        height:auto;
+        width:3em;
+        height:1em;
+    }
+    button{
+        margin-left: 40%;
+        border-radius: .5em;
+    }
+    h4{
+        color:rgb(36, 53, 151);
+        text-align: left;
+        margin:.4em 0 .5em .5em;
     }
     .education{
-        width:35%;
+        padding:.5em;
+        text-align: left;
+        width:40%;
+        height:20.5cm;
     }
     .education [name^="edu"]{
         color: whitesmoke;
@@ -124,9 +153,20 @@ input[name=eduDate]{
         font-weight:normal;
     }
 }
+@media (min-width: 900px){
+    body{
+        width: 900px;
+    }
+}
 @media print{
+    @page {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     body{
         text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px ;
     } 
     input{  
         background-color: transparent;
@@ -143,7 +183,7 @@ input[name=eduDate]{
         text-align: left;
     }
     .userName{
-        margin:.5em 0 0 .5em;
+        margin:0 0 0 .5em;
         font-size: 1.5em;
         font-weight: bold;
         color:rgb(36, 53, 151);
@@ -152,8 +192,8 @@ input[name=eduDate]{
         width:auto;
     }
     .birthday{
-        margin:.5em 0 0 .3em;
-        font-size: 1.5em;
+        margin:.2em 0 0 .3em;
+        font-size: 1.3em;
         font-weight: bold;
         color: lightslategrey;
     }
@@ -190,8 +230,16 @@ input[name=eduDate]{
         width:auto;
         height:auto;
     }
+    h4{
+        text-align: left;
+        margin:.4em 0 .4em .5em;
+        color:rgb(36, 53, 151);
+    }
     .education{
-        width:35%;
+        margin-left: 0;
+        padding-left: .2em;
+        width:40%;
+        height:20.5cm;
     }
     .education input{
         background-color:lightslategray;
@@ -216,5 +264,8 @@ input[name=eduDate]{
         color:rgb(36, 53, 151);
         font-weight:normal;
     }
-}
+    button{
+        visibility: hidden;
 
+    }
+}
