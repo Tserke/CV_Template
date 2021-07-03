@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button onclick="window.print()">Print this page</button>
     <div name="nameDate" class="nameDate" id="nameDate">
-        <div><input type="text" name="userName" class="userName" id="userName" ></Input></div>
-        <div><input type="text" name="birthday" class="birthday" id="birthday"></input></div>
+        <div class="nameContainer"><input type="text" name="userName" class="userName" id="userName" placeholder="name"></Input></div>
+        <div class="birthdayContainer"><input type="text" name="birthday" class="birthday" id="birthday" placeholder="date of birth"></input></div>
     </div>
     <div name="header" class="header" id="header">
         <div name="userPhoto" class="userPhoto" id="userPhoto">
@@ -20,38 +21,37 @@
         </div>
         <div name="userInfo" class="userInfo" id="userInfo">
                 <i class="fas fa-map-marker-alt fa-lg"></i>
-                    <input type="text" name="address" class="address" id="address"> 
+                    <input type="text" name="address" class="address" id="address" placeholder="address"> 
                 <br>
                 <i class="fas fa-phone-alt fa-lg"></i>
-                    <input type="tel" name="mobileNumber" class="mobileNumber" id="mobileNumber" size="15">
+                    <input type="tel" name="mobileNumber" class="mobileNumber" id="mobileNumber" size="15" placeholder="mobile number">
                 <br>    
                 <i class="fas fa-at fa-lg"></i>
-                    <input type="email" name="email" class="email" id="email">
+                    <input type="email" name="email" class="email" id="email" placeholder="email">
                 <br>
                 <i class="fab fa-github-square fa-lg"></i>
-                    <input type="text" name="github" class="github" id="github">
+                    <input type="text" name="github" class="github" id="github" placeholder="github">
                 <br>
                 <i class="fab fa-linkedin fa-lg"></i>
-                    <input type="text" name="linkedin" class="linkedin" id="linkedin">
-            <!--
-            <i class="fas fa-plus"></i>
-            <i class="fas fa-minus"></i>
-            -->
+                    <input type="text" name="linkedin" class="linkedin" id="linkedin" placeholder="linkedIn">
         </div>
     </div>
     <div name="mainSection" class="mainSection" id="mainSection">
         <div name="education" class="education" id="education">
+            <h4>education</h4>
             <form action="" name="educationForm" class="educationForm" id="educationForm">
             </form>
             <button name="addEducationInput" class="addEducationInput" id="addEducationInput" onclick="addEducationInput();"><i class="fas fa-plus"></i></button>
                 <button name="removeEducationInput" class="removeEducationInput" id="removeEducationInput" onclick="removeEducationInput();"><i class="fas fa-minus"></i></button>
         </div>
         <div name="work" class="work" id="work">
-            <form action="" name="workForm" class="workForm" id="workForm">
+            <h4>work experience</h4>
+            <form action="" name="workForm" class="workForm" id="workForm"> 
             </form>
             <button name="addWork" class="addWork" id="addWork" onclick="addWorkInput();"><i class="fas fa-plus"></i></button>
                 <button name="removeWork" class="removeWork" id="removeWork" onclick="removeWorkInput();"><i class="fas fa-minus"></i></button>
         </div>
     </div>
+    <button onclick="window.print()">Print this page</button>
 </body>
 </html> 
