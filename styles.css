@@ -242,7 +242,7 @@ input[name=workDate]{
         height:20.5cm;
     }
     .education input{
-        background-color:lightslategray;
+        background-color:rgb(208, 212, 221);
     }
     .education [name^="edu"]{
         color: whitesmoke;
