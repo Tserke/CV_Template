@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');*/
 
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
     margin:0;
     text-align: center;
 }
@@ -9,80 +11,114 @@ i{
     width: 20px;
     height:25px;
     text-align: center;
+    color: #0e1919;
 } 
-.nameContainer{
-    width:100%;
+img{ 
+    margin-top: 1em;
+    width: 165px;
+    height: 170px;
+    border-radius: 1em;
+}
+h3{
+    margin: .1em;
+    height: 1em;
+}
+h4{
+    color:#1e4c97;
+    text-align: center;
+}
+span{
+    border-bottom:solid 1px #6f6d69;
+    padding: 0 .3em;
+}
+p{
+    border-bottom: solid 1px #000;
+    color: #6f6d69;
+    font-size: 15px;
+    margin:0 0 0 .1em;
+}
+input{
+    color: #6f6d69;
+    font-size: 15px;
+    margin-top: .5em;
+}
+input[name=langSlider]{
+    -webkit-appearance: none;
+    background: rgb(179, 174, 174);
+    outline:none;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba (0,0,0,1);
+}
+input[name=langSlider]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background: #483bf3;
+    cursor: pointer;
+    box-shadow: -407px 0 0 400px #483bf3;
 }
 .userName{
     margin:.5em 0 0 0;
     font-size: 1.5em;
     font-weight: bold;
-    color:rgb(36, 53, 151);
+    color: #1e4c97;
+    min-width: 50%;
 }
 .birthday{
-    margin:.5em 0 .2em 0;
+    margin:.7em 0 .2em 0;
     font-size: 1.3em;
     font-weight: bold;
-    color: lightslategrey;
-}
-img{ 
-    margin-top: .5em;
-    width: 165px;
-    height: 170px;
-    border-radius: 1em;
+    color: #6f6d69;
 }
 .userInfo{
+    color: #6f6d69;
     margin:.5em;
 }
-.userInfo input{ 
-    width:90%;
-    font-size: 1.1em;
-    font-weight: normal;
-    margin:.2em;
-    text-align: justify;
-}
-h4{
-    text-align: center;
+.linkedIn{
+    color: #6f6d69;
+    margin:.5em;
 }
 .education{
-    border: solid 1px rgb(43, 98, 153);
+    border: solid 2px rgba(86, 171, 255, 0.116);
     border-radius: .1em;
     margin: .5em;
-    background-color: rgb(208, 212, 221);
+    background-color: #cacacab2;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+}
+.education [name="eduDate"]{
+    color:rgb(74, 95, 214);
+    font-weight: bold;
+    margin-top: .8em;
 }
 .education input{
+    color: #6f6d69;
     font-size: 15px;
-    width: 90%;
 }
-input[name=eduDate]{
-    width:50%;   
-}
-.work input{
-    font-size: 15px;
-    width: 90%;
-}
-input[name=workDate]{
-    width:50%;   
+.work [name=workDate]{
+    color:rgb(74, 95, 214);
+    font-weight:bold;
+    margin-top:.8em;
 }
 @media (min-width: 800px){
     body{
         text-align: left;
+        width: 900px;
+    }
+    button{
+        margin-left: 40%;
+        border-radius: .5em;
+    }
+    h4{
+        text-align: left;
+        margin:1em 0 .5em .1em;
     }
     .nameDate{
         display:flex;
     }
     .userName{
-        margin:.5em 0 0 .5em;
-        font-size: 1.5em;
-        font-weight: bold;
-        color:rgb(36, 53, 151);
-    }
- 
-    .birthday{
-        margin:.7em 0 0 0;
-        font-size: 1.3em;
-        font-weight: bold;
-        color: lightslategrey;
+        margin-left:.5em;
     }
     .header{
         margin:.5em;
@@ -93,22 +129,6 @@ input[name=workDate]{
     }
     .userInfo{
         width:70%;
-        color: darkslategrey;
-    } 
-    .userInfo input[type=text]{
-        font-size: 1.1em;
-        font-weight: bold;
-        color: lightslategrey;
-    }
-    .userInfo input[type=tel]{
-        font-size: 1.1em;
-        color:lightslategrey;
-        font-weight:bold;
-    }
-    .userInfo input[type=email]{
-        font-size: 1.1em;
-        color: lightslategrey;
-        font-weight:bold;
     }
     .mainSection{
         display: flex;
@@ -117,45 +137,18 @@ input[name=workDate]{
         width:3em;
         height:1em;
     }
-    button{
-        margin-left: 40%;
-        border-radius: .5em;
-    }
-    h4{
-        color:rgb(36, 53, 151);
-        text-align: left;
-        margin:.4em 0 .5em .5em;
-    }
     .education{
         padding:.5em;
         text-align: left;
         width:40%;
         height:20.5cm;
     }
-    .education [name^="edu"]{
-        color: whitesmoke;
-        font-weight: bold;
-    }
-    .education [name="eduDate"]{
-        color:rgb(36, 53, 151);
-        font-weight: normal;
+    .educationForm input{
+        width:40%;
     }
     .work{
         margin:.5em;
         width:65%;
-    }
-    .work [name^="work"]{
-        color:lightslategrey;
-        font-weight: bold;
-    }
-    .work [name=workDate]{
-        color:rgb(36, 53, 151);
-        font-weight:normal;
-    }
-}
-@media (min-width: 900px){
-    body{
-        width: 900px;
     }
 }
 @media print{
@@ -165,38 +158,41 @@ input[name=workDate]{
     }
     body{
         text-align: left;
-        padding-top: 25px;
-        padding-bottom: 25px ;
-    } 
+        padding-top: 1px;
+        padding-bottom: 1px ;
+    }  
+    i{
+        width: 20px;
+        height:25px;
+        text-align: center;
+    }  
+    h4{
+        text-align: left;
+        margin:.4em 0 .4em .1em;
+    }    
+    p{
+        border-bottom: none;
+    }
+    span{
+        border:none;
+    }
     input{  
         background-color: transparent;
         border:none;
         outline: none;
     }
-    i{
-        width: 20px;
-        height:25px;
-        text-align: center;
-    } 
+    button{
+        visibility: hidden;
+
+    }
+    input[name=langSlider]{
+        background: rgb(179, 174, 174);
+    }
     .nameDate{
         display: flex;
         text-align: left;
     }
-    .userName{
-        margin:0 0 0 .5em;
-        font-size: 1.5em;
-        font-weight: bold;
-        color:rgb(36, 53, 151);
-    }
-    .userName input{
-        width:auto;
-    }
-    .birthday{
-        margin:.2em 0 0 .3em;
-        font-size: 1.3em;
-        font-weight: bold;
-        color: lightslategrey;
-    }
+
     .header{
         margin:.5em;
         display: flex;
@@ -204,25 +200,7 @@ input[name=workDate]{
     .userPhoto{
         width:30%;
     }
-    .userInfo{
-        width:70%;
-        color: darkslategrey;
-    } 
-    .userInfo input[type=text]{
-        font-size: 1.1em;
-        font-weight: bold;
-        color: lightslategrey;
-    }
-    .userInfo input[type=tel]{
-        font-size: 1.1em;
-        color:lightslategrey;
-        font-weight:bold;
-    }
-    .userInfo input[type=email]{
-        font-size: 1.1em;
-        color: lightslategrey;
-        font-weight:bold;
-    }
+
     .mainSection{
         display: flex;
     }
@@ -230,42 +208,17 @@ input[name=workDate]{
         width:auto;
         height:auto;
     }
-    h4{
-        text-align: left;
-        margin:.4em 0 .4em .5em;
-        color:rgb(36, 53, 151);
-    }
     .education{
         margin-left: 0;
         padding-left: .2em;
         width:40%;
         height:20.5cm;
     }
-    .education input{
-        background-color:rgb(208, 212, 221);
-    }
-    .education [name^="edu"]{
-        color: whitesmoke;
-        font-weight: bold;
-    }
-    .education [name="eduDate"]{
-        color:rgb(36, 53, 151);
-        font-weight: normal;
-    }
     .work{
         margin:.5em;
         width:65%;
     }
-    .work [name^="work"]{
-        color:lightslategrey;
-        font-weight: bold;
-    }
-    .work [name=workDate]{
-        color:rgb(36, 53, 151);
-        font-weight:normal;
-    }
-    button{
-        visibility: hidden;
-
+    .educationForm input{
+        width:40%;
     }
 }
