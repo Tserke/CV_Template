@@ -11,6 +11,7 @@ i{
     width: 20px;
     height:25px;
     text-align: center;
+    margin-right: .3em;
     color: #0e1919;
 } 
 img{ 
@@ -59,6 +60,9 @@ input[name=langSlider]::-webkit-slider-thumb{
     cursor: pointer;
     box-shadow: -407px 0 0 400px #483bf3;
 }
+li{
+    color: #6f6d69;
+}
 .userName{
     margin:.5em 0 0 0;
     font-size: 1.5em;
@@ -69,17 +73,13 @@ input[name=langSlider]::-webkit-slider-thumb{
 .birthday{
     margin:.7em 0 .2em 0;
     font-size: 1.3em;
-    font-weight: bold;
     color: #6f6d69;
 }
 .userInfo{
     color: #6f6d69;
     margin:.5em;
 }
-.linkedIn{
-    color: #6f6d69;
-    margin:.5em;
-}
+
 .education{
     border: solid 2px rgba(86, 171, 255, 0.116);
     border-radius: .1em;
@@ -187,6 +187,9 @@ input[name=langSlider]::-webkit-slider-thumb{
     }
     input[name=langSlider]{
         background: rgb(179, 174, 174);
+    }
+    .linkedIn span{
+        font-size: 14px;
     }
     .nameDate{
         display: flex;
