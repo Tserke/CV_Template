@@ -7,39 +7,56 @@ body{
     margin:0;
     text-align: center;
 }
+.drop-zone {
+    margin-inline: 38%;
+    width: 165px;
+    height: 170px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 2px solid #009578;
+    border-radius: 10px;
+}
+.drop-zone__input {
+    display: none;
+}
+.drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+} 
 i{
     width: 20px;
     height:25px;
     text-align: center;
     margin-right: .3em;
-    color: #0e1919;
+    color: #483bf3;
 } 
-img{ 
-    margin-top: 1em;
-    width: 165px;
-    height: 170px;
-    border-radius: 1em;
-}
 h3{
     margin: .1em;
     height: 1em;
 }
 h4{
-    color:#1e4c97;
+    color: #483bf3;
     text-align: center;
 }
 span{
-    border-bottom:solid 1px #6f6d69;
+    border-bottom:solid 1px #868686;
     padding: 0 .3em;
 }
 p{
     border-bottom: solid 1px #000;
-    color: #6f6d69;
+    color: #868686;
     font-size: 15px;
     margin:0 0 0 .1em;
 }
 input{
-    color: #6f6d69;
+    color: #868686;
     font-size: 15px;
     margin-top: .5em;
 }
@@ -61,43 +78,39 @@ input[name=langSlider]::-webkit-slider-thumb{
     box-shadow: -407px 0 0 400px #483bf3;
 }
 li{
-    color: #6f6d69;
+    color: #868686;
 }
 .userName{
     margin:.5em 0 0 0;
     font-size: 1.5em;
     font-weight: bold;
-    color: #1e4c97;
+    color: #483bf3;
     min-width: 50%;
 }
 .birthday{
     margin:.7em 0 .2em 0;
     font-size: 1.3em;
-    color: #6f6d69;
+    color: #868686;
 }
 .userInfo{
-    color: #6f6d69;
+    color: #868686;
     margin:.5em;
 }
 
 .education{
-    border: solid 2px rgba(86, 171, 255, 0.116);
-    border-radius: .1em;
-    margin: .5em;
-    background-color: #cacacab2;
-    box-shadow: 3px 3px 15px rgba(0,0,0,.1);
+    margin:.5em;
 }
 .education [name="eduDate"]{
-    color:rgb(74, 95, 214);
+    color: hsl(240, 91%, 70%);
     font-weight: bold;
     margin-top: .8em;
 }
 .education input{
-    color: #6f6d69;
+    color: #868686;
     font-size: 15px;
 }
 .work [name=workDate]{
-    color:rgb(74, 95, 214);
+    color: hsl(240, 91%, 70%);
     font-weight:bold;
     margin-top:.8em;
 }
@@ -105,6 +118,9 @@ li{
     body{
         text-align: left;
         width: 900px;
+    }
+    .drop-zone {
+        margin: 15px 10px;
     }
     button{
         margin-left: 40%;
@@ -121,11 +137,8 @@ li{
         margin-left:.5em;
     }
     .header{
-        margin:.5em;
+        margin: .5em;
         display: flex;
-    }
-    .userPhoto{
-        width:20%;
     }
     .userInfo{
         width:70%;
@@ -142,6 +155,7 @@ li{
         text-align: left;
         width:40%;
         height:20.5cm;
+        border-right: solid 2px #483bf3;
     }
     .educationForm input{
         width:40%;
@@ -154,12 +168,19 @@ li{
 @media print{
     @page {
         margin-top: 0;
+        margin-right: 3mm;
+        margin-left: 5mm;
         margin-bottom: 0;
+        width: 200mm;
     }
     body{
         text-align: left;
         padding-top: 1px;
         padding-bottom: 1px ;
+    }
+    .drop-zone {
+        margin: 15px 5px 15px 0;
+        border: none;
     }  
     i{
         width: 20px;
@@ -188,22 +209,14 @@ li{
     input[name=langSlider]{
         background: rgb(179, 174, 174);
     }
-    .linkedIn span{
-        font-size: 14px;
-    }
     .nameDate{
         display: flex;
         text-align: left;
     }
-
     .header{
         margin:.5em;
         display: flex;
     }
-    .userPhoto{
-        width:30%;
-    }
-
     .mainSection{
         display: flex;
     }
@@ -215,13 +228,14 @@ li{
         margin-left: 0;
         padding-left: .2em;
         width:40%;
-        height:20.5cm;
+        height:21cm;
+        border-right: solid 2px #483bf3;
     }
     .work{
         margin:.5em;
-        width:65%;
+        width:55%;
     }
     .educationForm input{
-        width:40%;
+        width:45%;
     }
 }

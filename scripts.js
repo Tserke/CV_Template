@@ -123,10 +123,10 @@ function removeList(){
         ulRemove.remove();
     }
 }
-//function to add input of type text to education form field with a button input
+//work
 let counterWork=1
 function addWorkInput(){
-    //date input (type="text")
+    // add work date
     const date = document.createElement('p');
     date.setAttribute("contenteditable","true");
     date.setAttribute("name","workDate");
@@ -134,7 +134,7 @@ function addWorkInput(){
     date.setAttribute("placeholder","date");
     date.innerText= "date";
     workForm.append(date);
-    //work input (type="text")
+    // add work description
     const input = document.createElement('p');
     input.setAttribute("contenteditable","true");
     input.setAttribute("name","work"+counterWork);
@@ -144,7 +144,6 @@ function addWorkInput(){
     workForm.append(input);
     counterWork++
 }
-//function to remove input of type text from education form with a button input
 function removeWorkInput(){
     if(counterWork>1){
         counterWork--;
@@ -152,9 +151,73 @@ function removeWorkInput(){
         let workDate="#workDate"+counterWork;
         let workDateToBeRemoved=document.querySelector(workDate)
         workDateToBeRemoved.remove();
-        //removes work input
+        //removes work description
         let name ="#work"+counterWork;
         let toBeRemoved= document.querySelector(name);
         toBeRemoved.remove();
+    }
+}
+//drag and drop to set the photo
+document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+    const dropZoneElement = inputElement.closest(".drop-zone");
+
+    dropZoneElement.addEventListener("click", (e) => {
+    inputElement.click();
+    });
+
+    inputElement.addEventListener("change", (e) => {
+      if (inputElement.files.length) {
+        updateThumbnail(dropZoneElement, inputElement.files[0]);
+      }
+    });
+    
+    dropZoneElement.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropZoneElement.classList.add("drop-zone--over");
+    });
+
+    dropZoneElement.addEventListener("drop", (e) => {
+      e.preventDefault();
+
+      if (e.dataTransfer.files.length) {
+        inputElement.files = e.dataTransfer.files;
+        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+      }
+    });
+  });
+
+  /**
+   * Updates the thumbnail on a drop zone element.
+   *
+   * @param {HTMLElement} dropZoneElement
+   * @param {File} file
+   */
+  function updateThumbnail(dropZoneElement, file) {
+    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+    // First time - remove the prompt
+    if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+      dropZoneElement.querySelector(".drop-zone__prompt").remove();
+    }
+
+    // First time - there is no thumbnail element, so lets create it
+    if (!thumbnailElement) {
+      thumbnailElement = document.createElement("div");
+      thumbnailElement.classList.add("drop-zone__thumb");
+      dropZoneElement.appendChild(thumbnailElement);
+    }
+
+    thumbnailElement.dataset.label = file.name;
+
+    // Show thumbnail for image files
+    if (file.type.startsWith("image/")) {
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+      };
+    } else {
+      thumbnailElement.style.backgroundImage = null;
     }
 }

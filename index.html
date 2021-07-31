@@ -16,8 +16,9 @@
         <div><h3 type="text" name="birthday" class="birthday" id="birthday" contenteditable="true"><span>date of birth</span></h3></div>
     </div>
     <div name="header" class="header" id="header">
-        <div name="userPhoto" class="userPhoto" id="userPhoto">
-           <img src="photo.jpeg" alt="myFace" name="myFace" id="myFace">
+        <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" class="drop-zone__input">
         </div>
         <div name="userInfo" class="userInfo" id="userInfo"> 
                     <h3 name="address" class="address" id="address" ><i class="fas fa-map-marker-alt fa-lg"></i><span contenteditable="true">address</span></h3>
@@ -29,25 +30,27 @@
                     <h3 name="github" class="github" id="github" ><i class="fab fa-github-square fa-lg"></i><span contenteditable="true">github</span></h3>
                 <br>
                     <h3 name="linkedIn" class="linkedIn" id="linkedIn"><i class="fab fa-linkedin fa-lg"></i><span contenteditable="true">linkedIn</span></h3>
-            </div>
+        </div>
     </div>
     <div name="mainSection" class="mainSection" id="mainSection">
         <div name="education" class="education" id="education">
             <form action="" name="educationForm" class="educationForm" id="educationForm">
             </form>
-            <button name="addEducationInput" class="addEducationInput" id="addEducationInput" onclick="addEducationInput();"><i class="fas fa-plus"></i></button>
-            <button name="removeEducationInput" class="removeEducationInput" id="removeEducationInput" onclick="removeEducationInput();"><i class="fas fa-minus"></i></button>
+            <button name="addEducationInput" class="addEducationInput" id="addEducationInput" onclick="addEducationInput();"><i class="fas fa-plus"></i>education</button>
+            <button name="removeEducationInput" class="removeEducationInput" id="removeEducationInput" onclick="removeEducationInput();"><i class="fas fa-minus"></i>education</button>
             <button name="addLanguage" class="addLanguage" id="addLanguage" onclick="addLanguage();"><i class="fas fa-plus"></i>language</button>
             <button name="removeLanguage" class="removeLanguage" id="removeLanguage" onclick="removeLanguage();"><i class="fas fa-minus"></i>language</button>
             <button name="addList" class="addList" id="addList" onclick="addList();"><i class="fas fa-plus"></i>list</button>
             <button name="removeList" class="removeList" id="removeList" onclick="removeList();"><i class="fas fa-minus"></i>list</button>
         </div>
         <div name="work" class="work" id="work">
+            <h4>About me</h4>
+            <p class="aboutMe" name="aboutMe" id="aboutMe" contenteditable="true"></p>
             <h4>work experience</h4>
             <form action="" name="workForm" class="workForm" id="workForm"> 
             </form>
             <button name="addWork" class="addWork" id="addWork" onclick="addWorkInput();"><i class="fas fa-plus"></i></button>
-                <button name="removeWork" class="removeWork" id="removeWork" onclick="removeWorkInput();"><i class="fas fa-minus"></i></button>
+            <button name="removeWork" class="removeWork" id="removeWork" onclick="removeWorkInput();"><i class="fas fa-minus"></i></button>
         </div>
     </div>
     <button onclick="window.print()">Print this page</button>
